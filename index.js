@@ -12,9 +12,9 @@ const genCompChoice = () => {
     const i = Math.floor(Math.random()*3);
     return choices[i];
 }
-const drawGame = () => {
+const drawGame = (userChoice) => {
     console.log("Game was draw");
-    msg.innerText = "Draw!";
+    msg.innerText = `Draw! Both chose ${userChoice}`;
     resultColor.style.backgroundColor = "rgb(0, 26, 69)"
 }
 const showWinner = (userWin, userChoice, compChoice) => {
@@ -37,7 +37,7 @@ const playGame = (userChoice) => {
     console.log("User's choice : ", userChoice);
     console.log("Computer's choice : ", compChoice);
     if(userChoice==compChoice) {
-        drawGame();
+        drawGame(userChoice);
     } else {
         let userWin = true;
         if(userChoice==="rock") {
