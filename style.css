@@ -11,7 +11,7 @@ body {
     text-align: center;
     color: white;
     background-color: white;
-    height:70px;
+    height: 70px;
     color: black;
 }
 .heading {
@@ -30,32 +30,22 @@ body {
     align-items: center;
     height: 200px;
 }
-#rock {
+#rock, #paper, #scissors {
     margin: 10px 20px;
     border: 1px solid black;
     height: 135px;
     width: 135px;
     border-radius: 100%;
-    background-image: url(the_rock_img.jpeg);
     background-size: cover;
+}
+#rock {
+    background-image: url(the_rock_img.jpeg);
 }
 #paper {
-    margin: 10px 20px;
-    border: 1px solid black;
-    height: 135px;
-    width: 135px;
-    border-radius: 100%;
     background-image: url(paper_img.jpeg);
-    background-size: cover;
 }
 #scissors {
-    margin: 10px 20px;
-    border: 1px solid black;
-    height: 135px;
-    width: 135px;
-    border-radius: 100%;
     background-image: url(scissor_img.jpeg);
-    background-size: cover;
 }
 #rock:hover, #paper:hover, #scissors:hover {
     opacity: 0.9;
@@ -89,10 +79,6 @@ body {
     margin: 20px 30px;
     font-size: 1.5rem;
 }
-.computer {
-    margin: 20px 30px;
-    font-size: 1.5rem;
-}
 .result {
     display: flex;
     justify-content: center;
@@ -109,4 +95,102 @@ body {
 .result-text {
     color: white;
     font-size: 1.4rem;
+}
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 10px;
+    }
+
+    .heading {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    .options {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .option {
+        margin: 10px;
+        height: 100px;
+        width: 100px;
+        background-size: contain;
+    }
+
+    #rock, #paper, #scissors {
+        height: 100px;
+        width: 100px;
+    }
+
+    .super-score {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .score {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .our {
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+
+    .result-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: auto;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .heading {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .option {
+        margin: 5px;
+        height: 80px;
+        width: 80px;
+        background-size: contain;
+    }
+
+    #rock, #paper, #scissors {
+        height: 80px;
+        width: 80px;
+    }
+
+    .super-score {
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .score {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    .our {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    .result-text {
+        font-size: 1rem;
+    }
 }
